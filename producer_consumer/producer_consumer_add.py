@@ -35,7 +35,7 @@ def task_producers():
     """
     number = random.randint(1, 10)
     print("task distributed: %s." % number)
-    result = add.delay(number, number)
+    result = add.delay(number, number)  # get result of the task
     while not result.ready():
         time.sleep(0.1)
     print("task result is: %s" % result.get())
