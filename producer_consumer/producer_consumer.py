@@ -35,7 +35,7 @@ def task_producers():
     """
     number = random.randint(1, 10)
     result = task_consumers.delay(number)
-    print("task distributed.")
+    print("task distributed: %s." % number)
     # result = add.delay(number, number)
     while not result.ready():
         time.sleep(0.1)
