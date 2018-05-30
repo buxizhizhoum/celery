@@ -21,11 +21,11 @@ import time
 from celery import Celery
 
 
-# celery = Celery('producer_consumer')
-celery = Celery('producer_consumer', broker='redis://localhost:6379/0',
-                backend='redis://localhost:6379/0')
+# celery = Celery('producer_consumer', broker='redis://localhost:6379/0',
+#                 backend='redis://localhost:6379/0')
 # this is another method to provide config info
-# celery.config_from_object('celery_config')
+celery = Celery('producer_consumer')
+celery.config_from_object('celery_config')
 
 
 def task_producers():
