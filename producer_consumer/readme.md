@@ -4,7 +4,7 @@ cd to directory where the script to run is in. Here we cd to the directory where
 
 start celery:
      
-     celery -A <script_name_to_run_no_suffix> worker --loglevel=info
+     celery -A <script_name_to_run_no_suffix> worker --loglevel=info -Q <queue_name>
 
 start script to get result from celery backend:
      
