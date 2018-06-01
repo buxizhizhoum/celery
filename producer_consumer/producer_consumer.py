@@ -7,7 +7,7 @@ Usage:
     cd to the directory where the script to run is in.
     start celery:
 
-        celery -A producer_consumer worker --loglevel=info
+        celery -A producer_consumer worker --loglevel=info -Q pc
 
 NOTICE
     The task name of celery in the same backend should not be the same,
