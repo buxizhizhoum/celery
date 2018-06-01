@@ -1,6 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+relay on a class to hand mysql connections
 
+could add mysql pool in the future
+"""
 import json
 import time
 
